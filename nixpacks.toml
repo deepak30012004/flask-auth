@@ -1,0 +1,22 @@
+[phases.setup]
+commands = [
+  "echo Installing backend dependencies",
+  "cd backend && python3 -m venv venv && source venv/bin/activate && pip install -r requirements.txt",
+  "echo Installing frontend dependencies",
+  "cd frontend && npm install"
+]
+
+[phases.build]
+commands = [
+  "echo Building frontend",
+  "cd frontend && npm run build"
+]
+
+[phases.start]
+commands = [
+  "echo Starting backend",
+  "cd backend && source venv/bin/activate && python app.py"
+]
+
+[env]
+PORT = "8000"
