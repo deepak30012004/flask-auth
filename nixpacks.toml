@@ -1,7 +1,8 @@
 [phases.setup]
 commands = [
   "echo Installing backend dependencies",
-  "cd backend && python3 -m venv venv && source venv/bin/activate && pip install -r requirements.txt",
+  "cd backend && python3 -m pip install --upgrade pip",
+  "cd backend && python3 -m pip install -r requirements.txt",
   "echo Installing frontend dependencies",
   "cd frontend && npm install"
 ]
@@ -15,7 +16,7 @@ commands = [
 [phases.start]
 commands = [
   "echo Starting backend",
-  "cd backend && source venv/bin/activate && python app.py"
+  "cd backend && python app.py"
 ]
 
 [env]
