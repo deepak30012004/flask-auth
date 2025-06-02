@@ -13,11 +13,8 @@ commands = [
   "cd frontend && npm run build"
 ]
 
-[phases.start]
-commands = [
-  "echo Starting backend",
-  "cd backend && python app.py"
-]
+[start]
+cmd = "cd backend && python app.py"
 
 [env]
 PORT = "8000"
