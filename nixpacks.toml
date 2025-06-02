@@ -1,5 +1,6 @@
 [build]
-languages = ["python", "node"]
+# Force install both Python and Node.js
+pkgs = ["python311", "nodejs"]
 
 [phases.setup]
 commands = [
